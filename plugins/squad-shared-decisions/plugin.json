@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "squad-setup",
-  "description": "Set up Squad in a repository and link it to a shared Squad configuration repository using squad upstream.",
+  "name": "squad-shared-decisions",
+  "description": "Approach A: link a repository to a shared repo of Squad decisions, routing, wisdom, casting policy, and skills via squad upstream (read-only). Does not share agents or the team roster.",
   "version": "0.1.0",
   "author": {
     "name": "joshjohanning-org"
@@ -9,5 +9,5 @@
   "homepage": "https://github.com/joshjohanning-org/squad-copilot-plugins",
   "repository": "https://github.com/joshjohanning-org/squad-copilot-plugins",
   "license": "MIT",
-  "keywords": ["squad", "multi-agent", "onboarding"]
+  "keywords": ["squad", "multi-agent", "onboarding", "upstream", "decisions"]
 }

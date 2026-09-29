@@ -4,15 +4,21 @@
     "name": "joshjohanning-org"
   },
   "metadata": {
-    "description": "Copilot CLI plugins for onboarding repositories to a shared Squad configuration.",
-    "version": "0.1.0"
+    "description": "Copilot CLI plugins demonstrating two ways to roll out Squad across repositories: (A) shared decisions via squad upstream, (B) a starter team copied into each repo.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
-      "name": "squad-setup",
-      "description": "Set up Squad in a repository and link it to a shared Squad configuration repository using squad upstream.",
+      "name": "squad-shared-decisions",
+      "description": "Approach A: link a repository to a shared repo of Squad decisions, routing, wisdom, casting policy, and skills via squad upstream (read-only). Does not share agents or the team roster.",
       "version": "0.1.0",
-      "source": "./plugins/squad-setup"
+      "source": "./plugins/squad-shared-decisions"
+    },
+    {
+      "name": "squad-starter-team",
+      "description": "Approach B: lay down a pre-built starter Squad team (lead, developer, tester, reviewer, security, docs) in any repository. Each repo gets its own independent copy.",
+      "version": "0.1.0",
+      "source": "./plugins/squad-starter-team"
     }
   ]
 }

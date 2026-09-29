@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "squad-starter-team",
+  "description": "Approach B: lay down a pre-built starter Squad team (lead, developer, tester, reviewer, security, docs) in any repository. Each repo gets its own independent copy.",
+  "version": "0.1.0",
+  "author": {
+    "name": "joshjohanning-org"
+  },
+  "homepage": "https://github.com/joshjohanning-org/squad-copilot-plugins",
+  "repository": "https://github.com/joshjohanning-org/squad-copilot-plugins",
+  "license": "MIT",
+  "keywords": ["squad", "multi-agent", "onboarding", "starter-team"]
+}

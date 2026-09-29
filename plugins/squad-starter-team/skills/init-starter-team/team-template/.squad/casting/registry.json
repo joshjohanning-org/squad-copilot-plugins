@@ -1,0 +1,40 @@
+{
+  "agents": {
+    "lead": {
+      "created_at": "{{TIMESTAMP}}",
+      "persistent_name": "lead",
+      "universe": "preset:squad-starter-team",
+      "status": "active"
+    },
+    "developer": {
+      "created_at": "{{TIMESTAMP}}",
+      "persistent_name": "developer",
+      "universe": "preset:squad-starter-team",
+      "status": "active"
+    },
+    "tester": {
+      "created_at": "{{TIMESTAMP}}",
+      "persistent_name": "tester",
+      "universe": "preset:squad-starter-team",
+      "status": "active"
+    },
+    "reviewer": {
+      "created_at": "{{TIMESTAMP}}",
+      "persistent_name": "reviewer",
+      "universe": "preset:squad-starter-team",
+      "status": "active"
+    },
+    "security": {
+      "created_at": "{{TIMESTAMP}}",
+      "persistent_name": "security",
+      "universe": "preset:squad-starter-team",
+      "status": "active"
+    },
+    "docs": {
+      "created_at": "{{TIMESTAMP}}",
+      "persistent_name": "docs",
+      "universe": "preset:squad-starter-team",
+      "status": "active"
+    }
+  }
+}

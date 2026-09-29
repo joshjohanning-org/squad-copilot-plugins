@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Sets up Squad in the current git repository and links it to a shared Squad
-# config repository via `squad upstream`. Safe to re-run.
+# decisions repository via `squad upstream`. Safe to re-run.
 set -euo pipefail
 
-DEFAULT_SOURCE="https://github.com/joshjohanning-org/squad-shared-config.git"
+DEFAULT_SOURCE="https://github.com/joshjohanning-org/squad-shared-decisions.git"
 SOURCE="${SQUAD_SHARED_SOURCE:-$DEFAULT_SOURCE}"
 NAME="${SQUAD_SHARED_NAME:-shared}"
 REF="${SQUAD_SHARED_REF:-main}"
@@ -11,10 +11,10 @@ INIT_ARGS=()
 
 usage() {
   cat <<EOF
-Usage: setup-shared-squad.sh [--source <git-url|self>] [--name <name>] [--ref <branch>] [--no-workflows]
+Usage: link-shared-decisions.sh [--source <git-url|self>] [--name <name>] [--ref <branch>] [--no-workflows]
 
-  --source   Git URL of the shared Squad config repo, or "self" to use this
-             repo's origin remote (for a config branch in the same repo).
+  --source   Git URL of the shared Squad decisions repo, or "self" to use this
+             repo's origin remote (for a decisions branch in the same repo).
              Default: $DEFAULT_SOURCE
   --name     Upstream name. Default: shared
   --ref      Branch or tag to track. Default: main
@@ -55,7 +55,7 @@ if [[ "$SOURCE" == "self" ]]; then
 fi
 
 echo "==> Repository: $REPO_ROOT"
-echo "==> Shared config: $SOURCE (ref: $REF, name: $NAME)"
+echo "==> Shared decisions source: $SOURCE (ref: $REF, name: $NAME)"
 
 if [[ -d .squad ]]; then
   echo "==> Squad already initialized; skipping 'squad init'."
@@ -90,7 +90,7 @@ applyTo: "**"
 
 # Squad upstream inheritance
 
-This repository inherits shared Squad configuration from the upstreams listed in `.squad/upstream.json`.
+This repository inherits shared Squad decisions, routing, wisdom, casting policy, and skills (not agents or the team roster) from the upstreams listed in `.squad/upstream.json`.
 
 At the start of every Squad session, and before spawning or briefing any team member:
 
@@ -120,4 +120,4 @@ echo "Done. Next steps:"
 echo "  1. Review and commit: .squad/ (including upstream.json), .gitignore, $INSTRUCTIONS_FILE"
 echo "     (.squad/_upstream_repos/ is gitignored automatically.)"
 echo "  2. Start a new session: copilot --agent squad"
-echo "  3. Pull shared config updates later with: squad upstream sync"
+echo "  3. Pull shared decision updates later with: squad upstream sync"
